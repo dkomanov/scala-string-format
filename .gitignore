@@ -2,5 +2,3 @@
 target
 *.iml
 jmh.log
-jmh-result.json
-gh-pages

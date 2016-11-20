@@ -1,0 +1,1894 @@
+[
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 50.56810331603435,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 47.95537708141434,
+                "50.0" : 50.56810331603435,
+                "90.0" : 53.18082955065436,
+                "95.0" : 53.18082955065436,
+                "99.0" : 53.18082955065436,
+                "99.9" : 53.18082955065436,
+                "99.99" : 53.18082955065436,
+                "99.999" : 53.18082955065436,
+                "99.9999" : 53.18082955065436,
+                "100.0" : 53.18082955065436
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    47.95537708141434,
+                    53.18082955065436
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 86.98458928828886,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 85.12155534219026,
+                "50.0" : 86.98458928828886,
+                "90.0" : 88.84762323438746,
+                "95.0" : 88.84762323438746,
+                "99.0" : 88.84762323438746,
+                "99.9" : 88.84762323438746,
+                "99.99" : 88.84762323438746,
+                "99.999" : 88.84762323438746,
+                "99.9999" : 88.84762323438746,
+                "100.0" : 88.84762323438746
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    85.12155534219026,
+                    88.84762323438746
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 291.98912641192294,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 284.72248016579334,
+                "50.0" : 291.98912641192294,
+                "90.0" : 299.25577265805254,
+                "95.0" : 299.25577265805254,
+                "99.0" : 299.25577265805254,
+                "99.9" : 299.25577265805254,
+                "99.99" : 299.25577265805254,
+                "99.999" : 299.25577265805254,
+                "99.9999" : 299.25577265805254,
+                "100.0" : 299.25577265805254
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    284.72248016579334,
+                    299.25577265805254
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 65.83545552472498,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 64.83786238489006,
+                "50.0" : 65.83545552472498,
+                "90.0" : 66.83304866455991,
+                "95.0" : 66.83304866455991,
+                "99.0" : 66.83304866455991,
+                "99.9" : 66.83304866455991,
+                "99.99" : 66.83304866455991,
+                "99.999" : 66.83304866455991,
+                "99.9999" : 66.83304866455991,
+                "100.0" : 66.83304866455991
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    64.83786238489006,
+                    66.83304866455991
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 101.55447652284515,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 99.7814232674568,
+                "50.0" : 101.55447652284515,
+                "90.0" : 103.3275297782335,
+                "95.0" : 103.3275297782335,
+                "99.0" : 103.3275297782335,
+                "99.9" : 103.3275297782335,
+                "99.99" : 103.3275297782335,
+                "99.999" : 103.3275297782335,
+                "99.9999" : 103.3275297782335,
+                "100.0" : 103.3275297782335
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    99.7814232674568,
+                    103.3275297782335
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 171.19692028058637,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 171.024201075877,
+                "50.0" : 171.19692028058637,
+                "90.0" : 171.36963948529578,
+                "95.0" : 171.36963948529578,
+                "99.0" : 171.36963948529578,
+                "99.9" : 171.36963948529578,
+                "99.99" : 171.36963948529578,
+                "99.999" : 171.36963948529578,
+                "99.9999" : 171.36963948529578,
+                "100.0" : 171.36963948529578
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    171.024201075877,
+                    171.36963948529578
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 82.51173821260645,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 80.83109587004648,
+                "50.0" : 82.51173821260645,
+                "90.0" : 84.19238055516641,
+                "95.0" : 84.19238055516641,
+                "99.0" : 84.19238055516641,
+                "99.9" : 84.19238055516641,
+                "99.99" : 84.19238055516641,
+                "99.999" : 84.19238055516641,
+                "99.9999" : 84.19238055516641,
+                "100.0" : 84.19238055516641
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    84.19238055516641,
+                    80.83109587004648
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 89.2535121623743,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 87.73695042990367,
+                "50.0" : 89.2535121623743,
+                "90.0" : 90.77007389484493,
+                "95.0" : 90.77007389484493,
+                "99.0" : 90.77007389484493,
+                "99.9" : 90.77007389484493,
+                "99.99" : 90.77007389484493,
+                "99.999" : 90.77007389484493,
+                "99.9999" : 90.77007389484493,
+                "100.0" : 90.77007389484493
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    87.73695042990367,
+                    90.77007389484493
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 135.23587538607796,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 133.11336858568026,
+                "50.0" : 135.23587538607796,
+                "90.0" : 137.35838218647564,
+                "95.0" : 137.35838218647564,
+                "99.0" : 137.35838218647564,
+                "99.9" : 137.35838218647564,
+                "99.99" : 137.35838218647564,
+                "99.999" : 137.35838218647564,
+                "99.9999" : 137.35838218647564,
+                "100.0" : 137.35838218647564
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    133.11336858568026,
+                    137.35838218647564
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 117.59878337174649,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 116.6316710511195,
+                "50.0" : 117.59878337174649,
+                "90.0" : 118.5658956923735,
+                "95.0" : 118.5658956923735,
+                "99.0" : 118.5658956923735,
+                "99.9" : 118.5658956923735,
+                "99.99" : 118.5658956923735,
+                "99.999" : 118.5658956923735,
+                "99.9999" : 118.5658956923735,
+                "100.0" : 118.5658956923735
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    116.6316710511195,
+                    118.5658956923735
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 126.2366917225174,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 126.02581162285252,
+                "50.0" : 126.2366917225174,
+                "90.0" : 126.44757182218228,
+                "95.0" : 126.44757182218228,
+                "99.0" : 126.44757182218228,
+                "99.9" : 126.44757182218228,
+                "99.99" : 126.44757182218228,
+                "99.999" : 126.44757182218228,
+                "99.9999" : 126.44757182218228,
+                "100.0" : 126.44757182218228
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    126.44757182218228,
+                    126.02581162285252
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.concat_optimized",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 154.5218970843154,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 153.80363555177559,
+                "50.0" : 154.5218970843154,
+                "90.0" : 155.24015861685524,
+                "95.0" : 155.24015861685524,
+                "99.0" : 155.24015861685524,
+                "99.9" : 155.24015861685524,
+                "99.99" : 155.24015861685524,
+                "99.999" : 155.24015861685524,
+                "99.9999" : 155.24015861685524,
+                "100.0" : 155.24015861685524
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    153.80363555177559,
+                    155.24015861685524
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 1203.0435329239642,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1201.3321129623341,
+                "50.0" : 1203.0435329239642,
+                "90.0" : 1204.7549528855943,
+                "95.0" : 1204.7549528855943,
+                "99.0" : 1204.7549528855943,
+                "99.9" : 1204.7549528855943,
+                "99.99" : 1204.7549528855943,
+                "99.999" : 1204.7549528855943,
+                "99.9999" : 1204.7549528855943,
+                "100.0" : 1204.7549528855943
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1204.7549528855943,
+                    1201.3321129623341
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 1246.384267963274,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1246.3266712391537,
+                "50.0" : 1246.384267963274,
+                "90.0" : 1246.4418646873942,
+                "95.0" : 1246.4418646873942,
+                "99.0" : 1246.4418646873942,
+                "99.9" : 1246.4418646873942,
+                "99.99" : 1246.4418646873942,
+                "99.999" : 1246.4418646873942,
+                "99.9999" : 1246.4418646873942,
+                "100.0" : 1246.4418646873942
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1246.4418646873942,
+                    1246.3266712391537
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1437.2079640412676,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1419.6186843689195,
+                "50.0" : 1437.2079640412676,
+                "90.0" : 1454.797243713616,
+                "95.0" : 1454.797243713616,
+                "99.0" : 1454.797243713616,
+                "99.9" : 1454.797243713616,
+                "99.99" : 1454.797243713616,
+                "99.999" : 1454.797243713616,
+                "99.9999" : 1454.797243713616,
+                "100.0" : 1454.797243713616
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1419.6186843689195,
+                    1454.797243713616
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 1317.561227404462,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1279.4151330185223,
+                "50.0" : 1317.561227404462,
+                "90.0" : 1355.7073217904017,
+                "95.0" : 1355.7073217904017,
+                "99.0" : 1355.7073217904017,
+                "99.9" : 1355.7073217904017,
+                "99.99" : 1355.7073217904017,
+                "99.999" : 1355.7073217904017,
+                "99.9999" : 1355.7073217904017,
+                "100.0" : 1355.7073217904017
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1355.7073217904017,
+                    1279.4151330185223
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 1279.3205569808451,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1270.1251825217703,
+                "50.0" : 1279.3205569808451,
+                "90.0" : 1288.5159314399198,
+                "95.0" : 1288.5159314399198,
+                "99.0" : 1288.5159314399198,
+                "99.9" : 1288.5159314399198,
+                "99.99" : 1288.5159314399198,
+                "99.999" : 1288.5159314399198,
+                "99.9999" : 1288.5159314399198,
+                "100.0" : 1288.5159314399198
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1270.1251825217703,
+                    1288.5159314399198
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.f_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1327.901492371267,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1322.243936557914,
+                "50.0" : 1327.901492371267,
+                "90.0" : 1333.5590481846202,
+                "95.0" : 1333.5590481846202,
+                "99.0" : 1333.5590481846202,
+                "99.9" : 1333.5590481846202,
+                "99.99" : 1333.5590481846202,
+                "99.999" : 1333.5590481846202,
+                "99.9999" : 1333.5590481846202,
+                "100.0" : 1333.5590481846202
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1322.243936557914,
+                    1333.5590481846202
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 1244.288448494657,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1236.954292358215,
+                "50.0" : 1244.288448494657,
+                "90.0" : 1251.6226046310987,
+                "95.0" : 1251.6226046310987,
+                "99.0" : 1251.6226046310987,
+                "99.9" : 1251.6226046310987,
+                "99.99" : 1251.6226046310987,
+                "99.999" : 1251.6226046310987,
+                "99.9999" : 1251.6226046310987,
+                "100.0" : 1251.6226046310987
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1236.954292358215,
+                    1251.6226046310987
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 1261.217272781325,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1254.0281834848274,
+                "50.0" : 1261.217272781325,
+                "90.0" : 1268.4063620778222,
+                "95.0" : 1268.4063620778222,
+                "99.0" : 1268.4063620778222,
+                "99.9" : 1268.4063620778222,
+                "99.99" : 1268.4063620778222,
+                "99.999" : 1268.4063620778222,
+                "99.9999" : 1268.4063620778222,
+                "100.0" : 1268.4063620778222
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1254.0281834848274,
+                    1268.4063620778222
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1481.4912031328654,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1475.9193668519704,
+                "50.0" : 1481.4912031328654,
+                "90.0" : 1487.0630394137602,
+                "95.0" : 1487.0630394137602,
+                "99.0" : 1487.0630394137602,
+                "99.9" : 1487.0630394137602,
+                "99.99" : 1487.0630394137602,
+                "99.999" : 1487.0630394137602,
+                "99.9999" : 1487.0630394137602,
+                "100.0" : 1487.0630394137602
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1475.9193668519704,
+                    1487.0630394137602
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 1304.3983902017087,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1300.5215071382684,
+                "50.0" : 1304.3983902017087,
+                "90.0" : 1308.275273265149,
+                "95.0" : 1308.275273265149,
+                "99.0" : 1308.275273265149,
+                "99.9" : 1308.275273265149,
+                "99.99" : 1308.275273265149,
+                "99.999" : 1308.275273265149,
+                "99.9999" : 1308.275273265149,
+                "100.0" : 1308.275273265149
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1300.5215071382684,
+                    1308.275273265149
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 1366.7389495910097,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1322.5868281767034,
+                "50.0" : 1366.7389495910097,
+                "90.0" : 1410.891071005316,
+                "95.0" : 1410.891071005316,
+                "99.0" : 1410.891071005316,
+                "99.9" : 1410.891071005316,
+                "99.99" : 1410.891071005316,
+                "99.999" : 1410.891071005316,
+                "99.9999" : 1410.891071005316,
+                "100.0" : 1410.891071005316
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1322.5868281767034,
+                    1410.891071005316
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormat",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1434.9589289156343,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1424.7598401096457,
+                "50.0" : 1434.9589289156343,
+                "90.0" : 1445.1580177216226,
+                "95.0" : 1445.1580177216226,
+                "99.0" : 1445.1580177216226,
+                "99.9" : 1445.1580177216226,
+                "99.99" : 1445.1580177216226,
+                "99.999" : 1445.1580177216226,
+                "99.9999" : 1445.1580177216226,
+                "100.0" : 1445.1580177216226
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1424.7598401096457,
+                    1445.1580177216226
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 896.4150473906348,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 893.4206206713561,
+                "50.0" : 896.4150473906348,
+                "90.0" : 899.4094741099135,
+                "95.0" : 899.4094741099135,
+                "99.0" : 899.4094741099135,
+                "99.9" : 899.4094741099135,
+                "99.99" : 899.4094741099135,
+                "99.999" : 899.4094741099135,
+                "99.9999" : 899.4094741099135,
+                "100.0" : 899.4094741099135
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    899.4094741099135,
+                    893.4206206713561
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 926.8043533776058,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 925.7424143774748,
+                "50.0" : 926.8043533776058,
+                "90.0" : 927.8662923777367,
+                "95.0" : 927.8662923777367,
+                "99.0" : 927.8662923777367,
+                "99.9" : 927.8662923777367,
+                "99.99" : 927.8662923777367,
+                "99.999" : 927.8662923777367,
+                "99.9999" : 927.8662923777367,
+                "100.0" : 927.8662923777367
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    925.7424143774748,
+                    927.8662923777367
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1086.3026266784555,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1085.56811602069,
+                "50.0" : 1086.3026266784555,
+                "90.0" : 1087.037137336221,
+                "95.0" : 1087.037137336221,
+                "99.0" : 1087.037137336221,
+                "99.9" : 1087.037137336221,
+                "99.99" : 1087.037137336221,
+                "99.999" : 1087.037137336221,
+                "99.9999" : 1087.037137336221,
+                "100.0" : 1087.037137336221
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1085.56811602069,
+                    1087.037137336221
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 945.247511340635,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 938.9722420962429,
+                "50.0" : 945.247511340635,
+                "90.0" : 951.5227805850271,
+                "95.0" : 951.5227805850271,
+                "99.0" : 951.5227805850271,
+                "99.9" : 951.5227805850271,
+                "99.99" : 951.5227805850271,
+                "99.999" : 951.5227805850271,
+                "99.9999" : 951.5227805850271,
+                "100.0" : 951.5227805850271
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    951.5227805850271,
+                    938.9722420962429
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 955.686957756714,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 952.3594035198879,
+                "50.0" : 955.686957756714,
+                "90.0" : 959.0145119935403,
+                "95.0" : 959.0145119935403,
+                "99.0" : 959.0145119935403,
+                "99.9" : 959.0145119935403,
+                "99.99" : 959.0145119935403,
+                "99.999" : 959.0145119935403,
+                "99.9999" : 959.0145119935403,
+                "100.0" : 959.0145119935403
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    959.0145119935403,
+                    952.3594035198879
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.messageFormatCached",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 1073.7294828074077,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1067.8547939102061,
+                "50.0" : 1073.7294828074077,
+                "90.0" : 1079.6041717046096,
+                "95.0" : 1079.6041717046096,
+                "99.0" : 1079.6041717046096,
+                "99.9" : 1079.6041717046096,
+                "99.99" : 1079.6041717046096,
+                "99.999" : 1079.6041717046096,
+                "99.9999" : 1079.6041717046096,
+                "100.0" : 1079.6041717046096
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    1067.8547939102061,
+                    1079.6041717046096
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 137.29385477159985,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 136.88136348905488,
+                "50.0" : 137.29385477159985,
+                "90.0" : 137.7063460541448,
+                "95.0" : 137.7063460541448,
+                "99.0" : 137.7063460541448,
+                "99.9" : 137.7063460541448,
+                "99.99" : 137.7063460541448,
+                "99.999" : 137.7063460541448,
+                "99.9999" : 137.7063460541448,
+                "100.0" : 137.7063460541448
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    136.88136348905488,
+                    137.7063460541448
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 171.81201837211825,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 171.1420999934056,
+                "50.0" : 171.81201837211825,
+                "90.0" : 172.48193675083087,
+                "95.0" : 172.48193675083087,
+                "99.0" : 172.48193675083087,
+                "99.9" : 172.48193675083087,
+                "99.99" : 172.48193675083087,
+                "99.999" : 172.48193675083087,
+                "99.9999" : 172.48193675083087,
+                "100.0" : 172.48193675083087
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    171.1420999934056,
+                    172.48193675083087
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 333.76056841786914,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 332.9680397111669,
+                "50.0" : 333.76056841786914,
+                "90.0" : 334.55309712457137,
+                "95.0" : 334.55309712457137,
+                "99.0" : 334.55309712457137,
+                "99.9" : 334.55309712457137,
+                "99.99" : 334.55309712457137,
+                "99.999" : 334.55309712457137,
+                "99.9999" : 334.55309712457137,
+                "100.0" : 334.55309712457137
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    334.55309712457137,
+                    332.9680397111669
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 156.81499036670272,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 156.4260706313163,
+                "50.0" : 156.81499036670272,
+                "90.0" : 157.20391010208917,
+                "95.0" : 157.20391010208917,
+                "99.0" : 157.20391010208917,
+                "99.9" : 157.20391010208917,
+                "99.99" : 157.20391010208917,
+                "99.999" : 157.20391010208917,
+                "99.9999" : 157.20391010208917,
+                "100.0" : 157.20391010208917
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    156.4260706313163,
+                    157.20391010208917
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 191.12370259961284,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 190.77873104782535,
+                "50.0" : 191.12370259961284,
+                "90.0" : 191.46867415140034,
+                "95.0" : 191.46867415140034,
+                "99.0" : 191.46867415140034,
+                "99.9" : 191.46867415140034,
+                "99.99" : 191.46867415140034,
+                "99.999" : 191.46867415140034,
+                "99.9999" : 191.46867415140034,
+                "100.0" : 191.46867415140034
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    190.77873104782535,
+                    191.46867415140034
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.s_iterpolator",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 259.5643392576115,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 259.33852852568344,
+                "50.0" : 259.5643392576115,
+                "90.0" : 259.79014998953954,
+                "95.0" : 259.79014998953954,
+                "99.0" : 259.79014998953954,
+                "99.9" : 259.79014998953954,
+                "99.99" : 259.79014998953954,
+                "99.999" : 259.79014998953954,
+                "99.9999" : 259.79014998953954,
+                "100.0" : 259.79014998953954
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    259.79014998953954,
+                    259.33852852568344
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 112.61775002235643,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 111.78439020471593,
+                "50.0" : 112.61775002235643,
+                "90.0" : 113.45110983999693,
+                "95.0" : 113.45110983999693,
+                "99.0" : 113.45110983999693,
+                "99.9" : 113.45110983999693,
+                "99.99" : 113.45110983999693,
+                "99.999" : 113.45110983999693,
+                "99.9999" : 113.45110983999693,
+                "100.0" : 113.45110983999693
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    111.78439020471593,
+                    113.45110983999693
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 127.02537360381154,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 126.90207536899061,
+                "50.0" : 127.02537360381154,
+                "90.0" : 127.1486718386325,
+                "95.0" : 127.1486718386325,
+                "99.0" : 127.1486718386325,
+                "99.9" : 127.1486718386325,
+                "99.99" : 127.1486718386325,
+                "99.999" : 127.1486718386325,
+                "99.9999" : 127.1486718386325,
+                "100.0" : 127.1486718386325
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    127.1486718386325,
+                    126.90207536899061
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "1",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 232.30133630571603,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 230.28182688814516,
+                "50.0" : 232.30133630571603,
+                "90.0" : 234.3208457232869,
+                "95.0" : 234.3208457232869,
+                "99.0" : 234.3208457232869,
+                "99.9" : 234.3208457232869,
+                "99.99" : 234.3208457232869,
+                "99.999" : 234.3208457232869,
+                "99.9999" : 234.3208457232869,
+                "100.0" : 234.3208457232869
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    234.3208457232869,
+                    230.28182688814516
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : ""
+        },
+        "primaryMetric" : {
+            "score" : 145.58102944095103,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 145.54449339933674,
+                "50.0" : 145.58102944095103,
+                "90.0" : 145.6175654825653,
+                "95.0" : 145.6175654825653,
+                "99.0" : 145.6175654825653,
+                "99.9" : 145.6175654825653,
+                "99.99" : 145.6175654825653,
+                "99.999" : 145.6175654825653,
+                "99.9999" : 145.6175654825653,
+                "100.0" : 145.6175654825653
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    145.54449339933674,
+                    145.6175654825653
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string__10"
+        },
+        "primaryMetric" : {
+            "score" : 152.5773945993174,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 151.7551772969001,
+                "50.0" : 152.5773945993174,
+                "90.0" : 153.3996119017347,
+                "95.0" : 153.3996119017347,
+                "99.0" : 153.3996119017347,
+                "99.9" : 153.3996119017347,
+                "99.99" : 153.3996119017347,
+                "99.999" : 153.3996119017347,
+                "99.9999" : 153.3996119017347,
+                "100.0" : 153.3996119017347
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    151.7551772969001,
+                    153.3996119017347
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "benchmark" : "com.komanov.stringformat.jmh.ManyParamsBenchmark.slf4j",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "warmupIterations" : 2,
+        "warmupTime" : "2 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 2,
+        "measurementTime" : "3 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "value1" : "10000",
+            "value2" : "string___________________________________________________________________________________________100"
+        },
+        "primaryMetric" : {
+            "score" : 256.33160580430496,
+            "scoreError" : "NaN",
+            "scoreConfidence" : [
+                "NaN",
+                "NaN"
+            ],
+            "scorePercentiles" : {
+                "0.0" : 255.63409347473652,
+                "50.0" : 256.33160580430496,
+                "90.0" : 257.0291181338734,
+                "95.0" : 257.0291181338734,
+                "99.0" : 257.0291181338734,
+                "99.9" : 257.0291181338734,
+                "99.99" : 257.0291181338734,
+                "99.999" : 257.0291181338734,
+                "99.9999" : 257.0291181338734,
+                "100.0" : 257.0291181338734
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    255.63409347473652,
+                    257.0291181338734
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
