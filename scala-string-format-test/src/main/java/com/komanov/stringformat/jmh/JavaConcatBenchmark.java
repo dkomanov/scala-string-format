@@ -12,7 +12,7 @@ public class JavaConcatBenchmark extends BenchmarkBase {
     public Object nullObject = null;
 
     @Benchmark
-    public String java_concat() {
+    public String javaConcat() {
         return value1 + "a" + value2 + "b" + value2 + nullObject;
     }
 }

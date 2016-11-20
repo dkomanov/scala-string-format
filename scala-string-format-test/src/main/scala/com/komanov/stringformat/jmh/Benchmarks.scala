@@ -11,7 +11,6 @@ import org.slf4j.helpers.MessageFormatter
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Fork(value = 1, jvmArgs = Array("-Xmx2G"))
-//@Threads(2)
 @Measurement(iterations = 2, time = 3, timeUnit = TimeUnit.SECONDS)
 @Warmup(iterations = 2, time = 2, timeUnit = TimeUnit.SECONDS)
 abstract class BenchmarkBase
@@ -28,7 +27,7 @@ class ManyParamsBenchmark extends BenchmarkBase {
   private val messageFormatInstance = new MessageFormat("{0}a{1}b{2}{3}")
 
   @Benchmark
-  def concat(): String = {
+  def scalaConcat(): String = {
     value1 + "a" + value2 + "b" + value2 + nullObject
   }
 
@@ -48,17 +47,17 @@ class ManyParamsBenchmark extends BenchmarkBase {
   }
 
   @Benchmark
-  def concat_optimized(): String = {
+  def concatOptimized(): String = {
     OptimizedConcatenation.concat(value1, "a", value2, "b", value2, nullObject)
   }
 
   @Benchmark
-  def s_iterpolator(): String = {
+  def sInterpolator(): String = {
     s"${value1}a${value2}b${value2}${nullObject}"
   }
 
   @Benchmark
-  def f_iterpolator(): String = {
+  def fInterpolator(): String = {
     f"${value1}a${value2}b${value2}${nullObject}"
   }
 
