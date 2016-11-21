@@ -18,8 +18,8 @@ abstract class BenchmarkBase
 class ManyParamsBenchmark extends BenchmarkBase {
 
   @Param(Array("1", "10000"))
-  var value1: java.lang.Integer = 1
-  @Param(Array("", "string__10", "string___________________________________________________________________________________________100"))
+  var value1: Int = 1
+  @Param(Array("", "string__10", "string___________________________________________________________________________________________100", "string______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________495"))
   var value2: String = ""
 
   var nullObject: Object = null
@@ -33,7 +33,7 @@ class ManyParamsBenchmark extends BenchmarkBase {
 
   @Benchmark
   def messageFormat(): String = {
-    MessageFormat.format("{0}a{1}b{2}{3}", Array[Object](value1, value2, value2, nullObject): _*)
+    MessageFormat.format("{0}a{1}b{2}{3}", Array[Object](Int.box(value1), value2, value2, nullObject): _*)
   }
 
   @Benchmark
@@ -43,12 +43,12 @@ class ManyParamsBenchmark extends BenchmarkBase {
 
   @Benchmark
   def slf4j(): String = {
-    MessageFormatter.arrayFormat("{}a{}b{}{}", Array(value1, value2, value2, nullObject)).getMessage
+    MessageFormatter.arrayFormat("{}a{}b{}{}", Array(Int.box(value1), value2, value2, nullObject)).getMessage
   }
 
   @Benchmark
   def concatOptimized(): String = {
-    OptimizedConcatenation.concat(value1, "a", value2, "b", value2, nullObject)
+    OptimizedConcatenation.concat(Int.box(value1), "a", value2, "b", value2, nullObject)
   }
 
   @Benchmark
@@ -59,6 +59,11 @@ class ManyParamsBenchmark extends BenchmarkBase {
   @Benchmark
   def fInterpolator(): String = {
     f"${value1}a${value2}b${value2}${nullObject}"
+  }
+
+  @Benchmark
+  def javaConcat(): String = {
+    JavaConcatUtils.javaConcat(value1, value2, nullObject)
   }
 
 }

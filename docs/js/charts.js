@@ -1,311 +1,231 @@
 function loadScalaSerializationChartsPage(rawList) {
-    var DataSizesToView = ['1k', '2k', '4k', '8k'];
-    // ordered according to view
-    var Libraries = [
-        {
-            name: 'Json',
-            color: '#f4cccc',
-            excludeFromMax: true
-        },
-        {
-            name: 'ScalaPb',
-            color: '#ff0000',
-            excludeFromMax: false
-        },
-        {
-            name: 'JavaPb',
-            color: '#cc0000',
-            excludeFromMax: false
-        },
-        {
-            name: 'JavaThrift',
-            color: '#e69138',
-            excludeFromMax: false
-        },
-        {
-            name: 'Scrooge',
-            color: '#ff9900',
-            excludeFromMax: false
-        },
-        {
-            name: 'BooPickle',
-            color: '#6aa84f',
-            excludeFromMax: false
-        },
-        {
-            name: 'Chill',
-            color: '#0000ff',
-            excludeFromMax: true
-        },
-        {
-            name: 'Pickling',
-            color: '#cccccc',
-            excludeFromMax: true
-        },
-        {
-            name: 'JavaSerialization',
-            color: '#000000',
-            excludeFromMax: true
-        }
-    ];
-    var LibrariesToExcludeFromMax = createLibrariesToExcludeFromMax();
+  // ordered according to view
+  var DataSizeToView = [
+    {
+      name: "short (7)",
+      value: 7
+    },
+    {
+      name: "medium (31)",
+      value: 31
+    },
+    {
+      name: "long (211)",
+      value: 211
+    },
+    {
+      name: "very long (1001)",
+      value: 1001
+    }
+  ];
+  var Methods = [
+    {
+      name: 'javaConcat',
+      color: '#f4cccc'
+    },
+    {
+      name: 'messageFormat',
+      color: '#ff0000'
+    },
+    {
+      name: 'messageFormatCached',
+      color: '#cc0000'
+    },
+    {
+      name: 'scalaConcat',
+      color: '#e69138'
+    },
+    {
+      name: 'concatOptimized',
+      color: '#ff9900'
+    },
+    {
+      name: 'slf4j',
+      color: '#6aa84f'
+    },
+    {
+      name: 'sInterpolator',
+      color: '#0000ff'
+    },
+    {
+      name: 'fInterpolator',
+      color: '#cccccc'
+    }
+    // {
+    //   name: 'JavaSerialization',
+    //   color: '#000000'
+    // }
+  ];
 
-    var data = convertData(rawList);
+  var data = convertData(rawList);
 
-    $('.ssa-value-btn').click(function () {
-        var property = $(this).attr('data-property');
+  $('.ssf-value-btn').click(function () {
+    var property = $(this).attr('data-property');
 
-        buildChartAndRawData({
-            elem: '.site-both',
-            title: 'Two-way times',
-            subtitle: 'site, nanos',
-            maxTimeActions: ['both'],
-            action: 'both',
-            dataType: 'site',
-            property: property
-        });
-
-        buildChartAndRawData({
-            elem: '.events-both',
-            title: 'Two-way times',
-            subtitle: 'events, nanos',
-            maxTimeActions: ['both'],
-            action: 'both',
-            dataType: 'events',
-            property: property
-        });
-
-        buildChartAndRawData({
-            elem: '.site-serialization',
-            title: 'Serialization times',
-            subtitle: 'site, nanos',
-            maxTimeActions: ['serialization', 'deserialization'],
-            action: 'serialization',
-            dataType: 'site',
-            property: property
-        });
-
-        buildChartAndRawData({
-            elem: '.site-deserialization',
-            title: 'Deserialization times',
-            subtitle: 'site, nanos',
-            maxTimeActions: ['serialization', 'deserialization'],
-            action: 'deserialization',
-            dataType: 'site',
-            property: property
-        });
-
-        buildChartAndRawData({
-            elem: '.events-serialization',
-            title: 'Serialization times',
-            subtitle: 'events, nanos',
-            maxTimeActions: ['serialization', 'deserialization'],
-            action: 'serialization',
-            dataType: 'events',
-            property: property
-        });
-
-        buildChartAndRawData({
-            elem: '.events-deserialization',
-            title: 'Deserialization times',
-            subtitle: 'events, nanos',
-            maxTimeActions: ['serialization', 'deserialization'],
-            action: 'deserialization',
-            dataType: 'events',
-            property: property
-        });
-
-        $('.ssa-value-btn').removeClass('active');
-        $(this).addClass('active');
+    buildChartAndRawData({
+      elem: '.big-chart',
+      title: 'String formatting',
+      subtitle: 'times, nanos',
+      property: property
     });
 
-    $('.ssa-value-btn[data-property=avg]').click();
+    $('.ssf-value-btn').removeClass('active');
+    $(this).addClass('active');
+  });
 
-    function buildChartAndRawData(opts) {
-        var maxTime = getMaxTime(opts.maxTimeActions, opts.dataType, opts.property);
-        buildChart(opts.elem, opts.title, opts.subtitle, maxTime, getDataForChart(opts.action, opts.dataType, opts.property));
-        buildRawData(opts.elem + '-raw-data', opts.action, opts.dataType, opts.property)
+  $('.ssf-value-btn[data-property=avg]').click();
+
+  function buildChartAndRawData(opts) {
+    buildChart(opts.elem, opts.title, opts.subtitle, getDataForChart(opts.property));
+    buildRawData(opts.elem + '-raw-data', opts.property)
+  }
+
+  function buildChart(elem, title, subtitle, dataArray) {
+    var chartData = google.visualization.arrayToDataTable(dataArray);
+
+    var series = {};
+    $.each(Methods, function (index, method) {
+      series[index] = {
+        color: method.color
+      }
+    });
+
+    var options = {
+      chart: {
+        title: title,
+        subtitle: subtitle
+      },
+      series: series
+    };
+
+    var chart = new google.charts.Bar($(elem).get(0));
+
+    chart.draw(chartData, google.charts.Bar.convertOptions(options));
+  }
+
+  function buildRawData(elem, property) {
+    var table = $('<table>')
+      .addClass('table table-striped table-condensed');
+
+    var head = $('<tr>');
+    head.append($('<th>').html('Method \\ String Length'));
+    $.each(DataSizeToView, function (index, dataSize) {
+      head.append($('<th>').html(dataSize.name));
+    });
+    table.append($('<thead>').append(head));
+
+    var tbody = $('<tbody>');
+    $.each(data, function (index, value) {
+      var tr = $('<tr>');
+
+      function addTd(text) {
+        tr.append($('<td>').html(text));
+      }
+
+      addTd(value.name);
+
+      $.each(DataSizeToView, function (index, dataSize) {
+        var time = getTime(value, dataSize.value, property);
+        addTd(time);
+      });
+
+      tbody.append(tr);
+    });
+    table.append(tbody);
+
+    $(elem).empty().append(table);
+  }
+
+  function getOrUpdate(map, name, defaultValue) {
+    var v = map[name] || defaultValue || {};
+    map[name] = v;
+    return v;
+  }
+
+  function convertData(list) {
+    // {
+    //   name: javaConcat,
+    //   values: {
+    //     7: {avg, p0...},
+    //     101: {avg, p0...}
+    //   }
+    // }
+    //
+    var map = {};
+
+    $.each(list, function (index, entry) {
+      // code from Benchmarks!
+      var str = entry.params.value1 + "a" + entry.params.value2 + "b" + entry.params.value2 + "null";
+
+      var name = extractName(entry.benchmark);
+      var pm = entry.primaryMetric;
+
+      var timesByStringLength = getOrUpdate(map, name, {name: name, values: {}}).values;
+      timesByStringLength[str.length] = {
+        avg: pm.score,
+        p0: pm.scorePercentiles['0.0'],
+        p50: pm.scorePercentiles['50.0'],
+        p95: pm.scorePercentiles['95.0'],
+        p100: pm.scorePercentiles['100.0']
+      };
+    });
+
+    var result = [];
+    $.each(Methods, function (index, method) {
+      result.push(map[method.name] || {name: method.name});
+    });
+
+    return result;
+  }
+
+  function extractName(benchmark) {
+    //'com.komanov.stringformat.jmh.ManyParamsBenchmark.concat'
+
+    var index = benchmark.lastIndexOf('.');
+    if (index == -1) {
+      throw new Error('Expected a dot in a benchmark: ' + benchmark);
     }
+    return benchmark.substring(index + 1);
+  }
 
-    function buildChart(elem, title, subtitle, maxTime, dataArray) {
-        var chartData = google.visualization.arrayToDataTable(dataArray);
+  function getDataForChart(property) {
+    var result = [];
 
-        var series = {};
-        $.each(Libraries, function(index, lib) {
-            series[index] = {
-                color: lib.color
-            }
-        });
+    var header = ['string length'];
+    $.each(data, function (index, value) {
+      header.push(value.name);
+    });
+    result.push(header);
 
-        var options = {
-            chart: {
-                title: title,
-                subtitle: subtitle
-            },
-            series: series,
-            vAxis: {
-                viewWindow: {
-                    max: maxTime
-                }
-            }
-        };
+    $.each(DataSizeToView, function (index, dataSize) {
+      var line = [dataSize.name];
+      $.each(data, function (index, value) {
+        var time = getTime(value, dataSize.value, property);
+        line.push(time);
+      });
+      result.push(line);
+    });
 
-        var chart = new google.charts.Bar($(elem).get(0));
+    return result;
+  }
 
-        chart.draw(chartData, google.charts.Bar.convertOptions(options));
-    }
-
-    function buildRawData(elem, action, dataType, property) {
-        var table = $('<table>')
-            .addClass('table table-striped table-condensed');
-
-        var head = $('<tr>');
-        head.append($('<th>').html('Library \\ Data Size'));
-        $.each(DataSizesToView, function(index, dataSize) {
-            head.append($('<th>').html(dataSize));
-        });
-        table.append($('<thead>').append(head));
-
-        var tbody = $('<tbody>');
-        $.each(data, function(index, value) {
-            var tr = $('<tr>');
-            function addTd(text) {
-                tr.append($('<td>').html(text));
-            }
-
-            addTd(value.name);
-
-            $.each(DataSizesToView, function(index, dataSize) {
-                addTd(getTime(value, action, dataType, dataSize, property));
-            });
-
-            tbody.append(tr);
-        });
-        table.append(tbody);
-
-        $(elem).empty().append(table);
-    }
-
-    function getOrUpdate(map, name, defaultValue) {
-        var v = map[name] || defaultValue || {};
-        map[name] = v;
-        return v;
-    }
-
-    function convertData(list) {
-        var map = {};
-
-        $.each(list, function (index, entry) {
-            var t = extractFromBenchmark(entry.benchmark);
-            var pm = entry.primaryMetric;
-
-            var timeByDataSize = getOrUpdate(
-                getOrUpdate(
-                    getOrUpdate(map, t.name, {name: t.name, values: {}}).values,
-                    t.action
-                ),
-                t.dataType
-            );
-            timeByDataSize[t.dataSize] = {
-                avg: pm.score,
-                p0: pm.scorePercentiles['0.0'],
-                p50: pm.scorePercentiles['50.0'],
-                p95: pm.scorePercentiles['95.0'],
-                p100: pm.scorePercentiles['100.0']
-            };
-        });
-
-        var result = [];
-        $.each(Libraries, function(index, lib) {
-            result.push(map[lib.name]);
-        });
-
-        return result;
-    }
-
-    function extractFromBenchmark(benchmark) {
-        //'com.komanov.serialization.jmh.ScalaPbBenchmark.deserialization_events_1k'
-
-        var benchmarkParts = benchmark.split('Benchmark.');
-        if (benchmarkParts.length != 2) {
-            throw new Error('Expected 2 parts in a benchmark: ' + benchmark);
-        }
-
-        var typeParts = benchmarkParts[1].split('_');
-        if (typeParts.length != 3) {
-            throw new Error('Expected 3 type parts in a benchmark: ' + benchmark);
-        }
-
-        return {
-            name: benchmarkParts[0].substring(benchmarkParts[0].lastIndexOf('.') + 1),
-            action: typeParts[0],
-            dataType: typeParts[1],
-            dataSize: typeParts[2]
-        };
-    }
-
-    function getMaxTime(actions, dataType, property) {
-        var max = 0;
-        $.each(DataSizesToView, function (index, dataSize) {
-            $.each(data, function (index, value) {
-                if (LibrariesToExcludeFromMax[value.name] !== true) {
-                    $.each(actions, function (index, action) {
-                        max = Math.max(max, getTime(value, action, dataType, dataSize, property));
-                    });
-                }
-            });
-        });
-        // max, excluding very long, + 10%
-        // should be the same for all charts to better UX (comparison)
-        return max + (max / 10);
-    }
-
-    function getDataForChart(action, dataType, property) {
-        var result = [];
-
-        var header = ['data size'];
-        $.each(data, function (index, value) {
-            header.push(value.name);
-        });
-        result.push(header);
-
-        $.each(DataSizesToView, function (index, dataSize) {
-            var line = [dataSize];
-            $.each(data, function (index, value) {
-                var time = getTime(value, action, dataType, dataSize, property);
-                line.push(time);
-            });
-            result.push(line);
-        });
-
-        return result;
-    }
-
-    function getTime(value, action, dataType, dataSize, property) {
-        return Math.floor((((value.values[action] || {})[dataType] || {})[dataSize] || {})[property] || 0.0);
-    }
-
-    function createLibrariesToExcludeFromMax() {
-        var map = {};
-        $.each(Libraries, function (index, value) {
-            map[value.name] = value.excludeFromMax;
-        });
-        return map;
-    }
+  function getTime(value, dataSize, property) {
+    return Math.floor(((value.values || {})[dataSize] || {})[property] || 0.0);
+  }
 }
 
 $(document).ready(function () {
-    loadGoogleCharts(loadJmhResult);
+  loadGoogleCharts(loadJmhResult);
 });
 
 function loadGoogleCharts(onLoadCallback) {
-    google.charts.load('current', {'packages': ['bar']});
-    google.charts.setOnLoadCallback(onLoadCallback);
+  google.charts.load('current', {'packages': ['bar']});
+  google.charts.setOnLoadCallback(onLoadCallback);
 }
 
 function loadJmhResult() {
-    var url = 'jmh-result.json';
-    $.getJSON(url, function (list) {
-        loadScalaSerializationChartsPage(list);
-    });
+  var url = 'jmh-result.json';
+  $.getJSON(url, function (list) {
+    loadScalaSerializationChartsPage(list);
+  });
 }

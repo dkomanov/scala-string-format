@@ -52,25 +52,16 @@
     The configuration of a hardware is Intel® Core™ i7–5600U CPU @ 2.60GHz × 4 (2 core + 2 HT) with 16 GB RAM.
   </p>
 
-  <h2>Charts</h2>
-
-  <ul>
-    <li><a href="#site-both">Site Two-Way</a></li>
-    <li><a href="#events-both">Events Two-Way</a></li>
-    <li><a href="#site-serialization">Site Serialization</a></li>
-    <li><a href="#site-deserialization">Site Deserialization</a></li>
-    <li><a href="#events-serialization">Events Serialization</a></li>
-    <li><a href="#events-deserialization">Events Deserialization</a></li>
-  </ul>
+  <h2>Chart</h2>
 
   <div class="btn-toolbar" role="toolbar" aria-label="...">
     <div class="btn-group" role="group" aria-label="avg">
       <button class="btn disabled">Time units:</button>
-      <button class="btn btn-default ssa-value-btn" data-property="avg">avg</button>
-      <button class="btn btn-default ssa-value-btn" data-property="p0">p0</button>
-      <button class="btn btn-default ssa-value-btn" data-property="p50">p50</button>
-      <button class="btn btn-default ssa-value-btn" data-property="p95">p95</button>
-      <button class="btn btn-default ssa-value-btn" data-property="p100">p100</button>
+      <button class="btn btn-default ssf-value-btn" data-property="avg">avg</button>
+      <button class="btn btn-default ssf-value-btn" data-property="p0">p0</button>
+      <button class="btn btn-default ssf-value-btn" data-property="p50">p50</button>
+      <button class="btn btn-default ssf-value-btn" data-property="p95">p95</button>
+      <button class="btn btn-default ssf-value-btn" data-property="p100">p100</button>
     </div>
   </div>
 
@@ -79,88 +70,13 @@
     (max)
   </small>
 
-  <h3>
-    <a name="site-both"></a>
-    Site Two-Way
-  </h3>
-
-  <div class="site-both ssa-chart"></div>
+  <div class="big-chart ssf-chart"></div>
 
   <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".site-both-raw-data">Raw data</button>
+    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".big-chart-raw-data">Raw data</button>
   </p>
 
-  <div class="site-both-raw-data collapse"></div>
-
-  <h3>
-    <a name="events-both"></a>
-    Events Two-Way
-  </h3>
-
-  <div class="events-both ssa-chart"></div>
-
-  <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".events-both-raw-data">Raw data</button>
-  </p>
-
-  <div class="events-both-raw-data collapse"></div>
-
-  <h3>
-    <a name="site-serialization"></a>
-    Site Serialization
-  </h3>
-
-  <div class="site-serialization ssa-chart"></div>
-
-  <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".site-serialization-raw-data">Raw data</button>
-  </p>
-
-  <div class="site-serialization-raw-data collapse"></div>
-
-  <h3>
-    <a name="site-deserialization"></a>
-    Site Deserialization
-  </h3>
-
-  <div class="site-deserialization ssa-chart"></div>
-
-  <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".site-deserialization-raw-data">Raw data</button>
-  </p>
-
-  <div class="site-deserialization-raw-data collapse"></div>
-
-  <h3>
-    <a name="events-serialization"></a>
-    Events Serialization
-  </h3>
-
-  <div class="events-serialization ssa-chart"></div>
-
-  <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".events-serialization-raw-data">Raw data</button>
-  </p>
-
-  <div class="events-serialization-raw-data collapse"></div>
-
-  <h3>
-    <a name="events-deserialization"></a>
-    Events Deserialization
-  </h3>
-
-  <div class="alert alert-warning" role="alert">
-    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    In this benchmark Chill failed with "Buffer underflow" exception.
-  </div>
-
-  <div class="events-deserialization ssa-chart"></div>
-
-  <p>
-    <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".events-deserialization-raw-data">Raw data</button>
-  </p>
-
-  <div class="events-deserialization-raw-data collapse"></div>
+  <div class="big-chart-raw-data collapse"></div>
 
   <p>
     &nbsp;
