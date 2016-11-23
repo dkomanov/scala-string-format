@@ -1,11 +1,9 @@
 package com.komanov.stringformat.jmh
 
-import java.text.MessageFormat
 import java.util.concurrent.TimeUnit
 
-import com.komanov.stringformat.OptimizedConcatenation
+import com.komanov.stringformat.{JavaFormats, ScalaFormats}
 import org.openjdk.jmh.annotations._
-import org.slf4j.helpers.MessageFormatter
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Array(Mode.AverageTime))
@@ -24,46 +22,49 @@ class ManyParamsBenchmark extends BenchmarkBase {
 
   var nullObject: Object = null
 
-  private val messageFormatInstance = new MessageFormat("{0}a{1}b{2}{3}")
+  @Benchmark
+  def javaConcat(): String = {
+    JavaFormats.concat(value1, value2, nullObject)
+  }
 
   @Benchmark
   def scalaConcat(): String = {
-    value1 + "a" + value2 + "b" + value2 + nullObject
+    ScalaFormats.concat(value1, value2, nullObject)
   }
 
   @Benchmark
   def messageFormat(): String = {
-    MessageFormat.format("{0}a{1}b{2}{3}", Array[Object](Int.box(value1), value2, value2, nullObject): _*)
+    JavaFormats.messageFormat(value1, value2, nullObject)
   }
 
   @Benchmark
   def messageFormatCached(): String = {
-    messageFormatInstance.format(Array(value1, value2, value2, nullObject))
+    JavaFormats.messageFormatCached(value1, value2, nullObject)
   }
 
   @Benchmark
   def slf4j(): String = {
-    MessageFormatter.arrayFormat("{}a{}b{}{}", Array(Int.box(value1), value2, value2, nullObject)).getMessage
+    JavaFormats.slf4j(value1, value2, nullObject)
   }
 
   @Benchmark
   def concatOptimized(): String = {
-    OptimizedConcatenation.concat(Int.box(value1), "a", value2, "b", value2, nullObject)
+    ScalaFormats.optimizedConcat(value1, value2, nullObject)
   }
 
   @Benchmark
   def sInterpolator(): String = {
-    s"${value1}a${value2}b${value2}${nullObject}"
+    ScalaFormats.sInterpolator(value1, value2, nullObject)
   }
 
   @Benchmark
   def fInterpolator(): String = {
-    f"${value1}a${value2}b${value2}${nullObject}"
+    ScalaFormats.fInterpolator(value1, value2, nullObject)
   }
 
   @Benchmark
-  def javaConcat(): String = {
-    JavaConcatUtils.javaConcat(value1, value2, nullObject)
+  def rawInterpolator(): String = {
+    ScalaFormats.rawInterpolator(value1, value2, nullObject)
   }
 
 }
