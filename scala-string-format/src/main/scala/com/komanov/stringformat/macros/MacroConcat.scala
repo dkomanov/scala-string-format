@@ -34,10 +34,8 @@ object MacroConcat {
       case Apply(_, List(Apply(_, list))) => list
     }
 
-    def rawPartsString = {
-      rawParts.map {
-        case Literal(Constant(rawPart: String)) => rawPart
-      }
+    val rawPartsString = rawParts.map {
+      case Literal(Constant(rawPart: String)) => StringContext.treatEscapes(rawPart)
     }
 
     if (args.isEmpty) {
@@ -74,7 +72,7 @@ object MacroConcat {
         }
     }.unzip3
 
-    val allParts: List[c.universe.Tree] = rawParts.zipAll(arguments, null, null).flatMap {
+    val allParts: List[c.universe.Tree] = rawPartsString.map(s => Literal(Constant(s))).zipAll(arguments, null, null).flatMap {
       case (raw, null) => List(raw)
       case (raw, arg) if raw != null => List(raw, arg)
     }
