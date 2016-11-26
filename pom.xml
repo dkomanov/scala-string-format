@@ -9,6 +9,7 @@
 
     <modules>
         <module>scala-string-format</module>
+        <module>scala-string-format-core</module>
         <module>scala-string-format-test</module>
     </modules>
 

@@ -9,9 +9,47 @@ import org.openjdk.jmh.annotations._
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Fork(value = 1, jvmArgs = Array("-Xmx2G"))
-@Measurement(iterations = 2, time = 3, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 7, time = 3, timeUnit = TimeUnit.SECONDS)
 @Warmup(iterations = 2, time = 2, timeUnit = TimeUnit.SECONDS)
 abstract class BenchmarkBase
+
+class EmptyStringBenchmark extends BenchmarkBase {
+
+  @Benchmark
+  def baseline: String = {
+    ""
+  }
+
+  @Benchmark
+  def sInterpolator: String = {
+    s""
+  }
+
+  @Benchmark
+  def sfiInterpolator: String = {
+    import com.komanov.stringformat.macros.MacroConcat._
+    sfi""
+  }
+}
+
+class ConstStringBenchmark extends BenchmarkBase {
+
+  @Benchmark
+  def baseline: String = {
+    "abc"
+  }
+
+  @Benchmark
+  def sInterpolator: String = {
+    s"abc"
+  }
+
+  @Benchmark
+  def sfiInterpolator: String = {
+    import com.komanov.stringformat.macros.MacroConcat._
+    sfi"abc"
+  }
+}
 
 class ManyParamsBenchmark extends BenchmarkBase {
 
@@ -65,6 +103,11 @@ class ManyParamsBenchmark extends BenchmarkBase {
   @Benchmark
   def rawInterpolator(): String = {
     ScalaFormats.rawInterpolator(value1, value2, nullObject)
+  }
+
+  @Benchmark
+  def sfiInterpolator(): String = {
+    ScalaFormats.sfiInterpolator(value1, value2, nullObject)
   }
 
 }

@@ -14,7 +14,8 @@ class FormatsTest extends SpecificationWithJUnit {
     "optimizedConcat" -> ScalaFormats.optimizedConcat,
     "sInterpolator" -> ScalaFormats.sInterpolator,
     "fInterpolator" -> ScalaFormats.fInterpolator,
-    "rawInterpolator" -> ScalaFormats.rawInterpolator
+    "rawInterpolator" -> ScalaFormats.rawInterpolator,
+    "sfiInterpolator" -> ScalaFormats.sfiInterpolator
   )
 
   Fragment.foreach(formats) { case (name, f) =>

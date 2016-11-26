@@ -50,11 +50,11 @@ function loadScalaSerializationChartsPage(rawList) {
     {
       name: 'fInterpolator',
       color: '#cccccc'
+    },
+    {
+      name: 'sfiInterpolator',
+      color: '#000000'
     }
-    // {
-    //   name: 'JavaSerialization',
-    //   color: '#000000'
-    // }
   ];
 
   var data = convertData(rawList);
@@ -155,7 +155,9 @@ function loadScalaSerializationChartsPage(rawList) {
 
     $.each(list, function (index, entry) {
       // code from Benchmarks!
-      var str = entry.params.value1 + "a" + entry.params.value2 + "b" + entry.params.value2 + "null";
+      var str = entry.params
+        ? entry.params.value1 + "a" + entry.params.value2 + "b" + entry.params.value2 + "null"
+        : '';
 
       var name = extractName(entry.benchmark);
       var pm = entry.primaryMetric;
