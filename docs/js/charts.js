@@ -2,20 +2,32 @@ function loadScalaSerializationChartsPage(rawList) {
   // ordered according to view
   var DataSizeToView = [
     {
-      name: "short (7)",
-      value: 7
+      name: "tiny (7)",
+      value: "Tiny"
     },
     {
-      name: "medium (31)",
-      value: 31
+      name: "very short (17)",
+      value: "VeryShort"
     },
     {
-      name: "long (211)",
-      value: 211
+      name: "short (29)",
+      value: "Short"
     },
     {
-      name: "very long (1001)",
-      value: 1001
+      name: "medium (75)",
+      value: "Medium"
+    },
+    {
+      name: "long (212)",
+      value: "Long"
+    },
+    {
+      name: "very long (1004)",
+      value: "VeryLong"
+    },
+    {
+      name: "very long size miss (1006)",
+      value: "VeryLongSizeMiss"
     }
   ];
   var Methods = [
@@ -155,15 +167,15 @@ function loadScalaSerializationChartsPage(rawList) {
 
     $.each(list, function (index, entry) {
       // code from Benchmarks!
-      var str = entry.params
-        ? entry.params.value1 + "a" + entry.params.value2 + "b" + entry.params.value2 + "null"
+      var type = entry.params
+        ? entry.params.arg
         : '';
 
       var name = extractName(entry.benchmark);
       var pm = entry.primaryMetric;
 
       var timesByStringLength = getOrUpdate(map, name, {name: name, values: {}}).values;
-      timesByStringLength[str.length] = {
+      timesByStringLength[type] = {
         avg: pm.score,
         p0: pm.scorePercentiles['0.0'],
         p50: pm.scorePercentiles['50.0'],

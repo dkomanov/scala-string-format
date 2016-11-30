@@ -51,7 +51,7 @@ object MacroConcat {
           case tt if tt.typeSymbol.asClass.isPrimitive =>
             // A kind of optimization to not calculate primitive length in advance, let the StringBuilder
             // to deal with primitive toString (it's better than i.e. Int.toString static method).
-            initialLength += 6
+            initialLength += 9
             (Nil, Nil, e.tree)
           case tt if tt <:< typeOf[CharSequence] =>
             val expr =
