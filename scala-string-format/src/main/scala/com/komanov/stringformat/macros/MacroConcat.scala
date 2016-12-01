@@ -1,7 +1,7 @@
 package com.komanov.stringformat.macros
 
 import scala.language.experimental.macros
-import scala.reflect.macros.whitebox.Context
+import scala.reflect.macros.whitebox
 
 object MacroConcat {
 
@@ -9,8 +9,8 @@ object MacroConcat {
     def sfi(args: Any*): String = macro sfiImpl
   }
 
-  def sfiImpl(c: Context)(args: c.Expr[Any]*): c.Expr[String] = {
-    import c.universe.{Name => _, _}
+  def sfiImpl(c: whitebox.Context)(args: c.Expr[Any]*): c.Expr[String] = {
+    import c.universe._
 
     // helper functions
 
