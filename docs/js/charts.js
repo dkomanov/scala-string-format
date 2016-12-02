@@ -36,6 +36,10 @@ function loadScalaSerializationChartsPage(rawList) {
       color: '#f4cccc'
     },
     {
+      name: 'stringFormat',
+      color: '#f49999'
+    },
+    {
       name: 'messageFormat',
       color: '#ff0000'
     },

@@ -7,6 +7,7 @@ class FormatsTest extends SpecificationWithJUnit {
 
   val formats: List[(String, (Int, String, Object) => String)] = List(
     "javaConcat" -> JavaFormats.concat,
+    "stringFormat" -> JavaFormats.stringFormat,
     "messageFormat" -> JavaFormats.messageFormat,
     "messageFormatCached" -> JavaFormats.messageFormatCached,
     "slf4j" -> JavaFormats.slf4j,

@@ -10,7 +10,7 @@ import org.openjdk.jmh.annotations._
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Fork(value = 2, jvmArgs = Array("-Xmx2G"))
 @Measurement(iterations = 7, time = 3, timeUnit = TimeUnit.SECONDS)
-@Warmup(iterations = 2, time = 2, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 3, time = 3, timeUnit = TimeUnit.SECONDS)
 abstract class BenchmarkBase
 
 class EmptyStringBenchmark extends BenchmarkBase {
@@ -66,6 +66,11 @@ class ManyParamsBenchmark extends BenchmarkBase {
   @Benchmark
   def scalaConcat(): String = {
     ScalaFormats.concat(arg.value1, arg.value2, nullObject)
+  }
+
+  @Benchmark
+  def stringFormat(): String = {
+    JavaFormats.stringFormat(arg.value1, arg.value2, nullObject)
   }
 
   @Benchmark
