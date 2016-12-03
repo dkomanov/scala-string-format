@@ -8,8 +8,16 @@ object ScalaFormats {
     value1 + "a" + value2 + "b" + value2 + nullObject
   }
 
-  def optimizedConcat(value1: Int, value2: String, nullObject: Object): String = {
-    OptimizedConcatenation.concat(Int.box(value1), "a", value2, "b", value2, nullObject)
+  def optimizedConcat1(value1: Int, value2: String, nullObject: Object): String = {
+    OptimizedConcatenation1.concat(Int.box(value1), "a", value2, "b", value2, nullObject)
+  }
+
+  def optimizedConcat2(value1: Int, value2: String, nullObject: Object): String = {
+    OptimizedConcatenation2.concat(Int.box(value1), "a", value2, "b", value2, nullObject)
+  }
+
+  def optimizedConcatMacros(value1: Int, value2: String, nullObject: Object): String = {
+    so"${value1}a${value2}b$value2$nullObject"
   }
 
   def sInterpolator(value1: Int, value2: String, nullObject: Object): String = {

@@ -49,11 +49,19 @@ function loadScalaSerializationChartsPage(rawList) {
     },
     {
       name: 'scalaConcat',
+      color: '#999900'
+    },
+    {
+      name: 'concatOptimized1',
       color: '#e69138'
     },
     {
-      name: 'concatOptimized',
+      name: 'concatOptimized2',
       color: '#ff9900'
+    },
+    {
+      name: 'concatOptimizedMacros',
+      color: '#ff9966'
     },
     {
       name: 'slf4j',

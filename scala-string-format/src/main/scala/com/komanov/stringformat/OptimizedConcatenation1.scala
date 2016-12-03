@@ -2,26 +2,28 @@ package com.komanov.stringformat
 
 import scala.annotation.varargs
 
-object OptimizedConcatenation {
+object OptimizedConcatenation1 {
 
-  def concat(s1: Object, s2: Object): String = {
-    concatNonNull(orNull(s1), orNull(s2))
+  type StringBuilder = java.lang.StringBuilder
+
+  def concat(o1: Object, o2: Object): String = {
+    concatNonNull(orNull(o1), orNull(o2))
   }
 
-  def concat(s1: Object, s2: Object, s3: Object): String = {
-    concatNonNull(orNull(s1), orNull(s2), orNull(s3))
+  def concat(o1: Object, o2: Object, o3: Object): String = {
+    concatNonNull(orNull(o1), orNull(o2), orNull(o3))
   }
 
-  def concat(s1: Object, s2: Object, s3: Object, s4: Object): String = {
-    concatNonNull(orNull(s1), orNull(s2), orNull(s3), orNull(s4))
+  def concat(o1: Object, o2: Object, o3: Object, o4: Object): String = {
+    concatNonNull(orNull(o1), orNull(o2), orNull(o3), orNull(o4))
   }
 
-  def concat(s1: Object, s2: Object, s3: Object, s4: Object, s5: Object): String = {
-    concatNonNull(orNull(s1), orNull(s2), orNull(s3), orNull(s4), orNull(s5))
+  def concat(o1: Object, o2: Object, o3: Object, o4: Object, o5: Object): String = {
+    concatNonNull(orNull(o1), orNull(o2), orNull(o3), orNull(o4), orNull(o5))
   }
 
-  def concat(s1: Object, s2: Object, s3: Object, s4: Object, s5: Object, o6: Object): String = {
-    concatNonNull(orNull(s1), orNull(s2), orNull(s3), orNull(s4), orNull(s5), orNull(o6))
+  def concat(o1: Object, o2: Object, o3: Object, o4: Object, o5: Object, o6: Object): String = {
+    concatNonNull(orNull(o1), orNull(o2), orNull(o3), orNull(o4), orNull(o5), orNull(o6))
   }
 
   @varargs

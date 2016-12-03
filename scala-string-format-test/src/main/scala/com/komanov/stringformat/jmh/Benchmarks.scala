@@ -13,44 +13,6 @@ import org.openjdk.jmh.annotations._
 @Warmup(iterations = 3, time = 3, timeUnit = TimeUnit.SECONDS)
 abstract class BenchmarkBase
 
-class EmptyStringBenchmark extends BenchmarkBase {
-
-  @Benchmark
-  def baseline: String = {
-    ""
-  }
-
-  @Benchmark
-  def sInterpolator: String = {
-    s""
-  }
-
-  @Benchmark
-  def sfiInterpolator: String = {
-    import com.komanov.stringformat.macros.MacroConcat._
-    sfi""
-  }
-}
-
-class ConstStringBenchmark extends BenchmarkBase {
-
-  @Benchmark
-  def baseline: String = {
-    "abc"
-  }
-
-  @Benchmark
-  def sInterpolator: String = {
-    s"abc"
-  }
-
-  @Benchmark
-  def sfiInterpolator: String = {
-    import com.komanov.stringformat.macros.MacroConcat._
-    sfi"abc"
-  }
-}
-
 class ManyParamsBenchmark extends BenchmarkBase {
 
   @Param
@@ -89,8 +51,18 @@ class ManyParamsBenchmark extends BenchmarkBase {
   }
 
   @Benchmark
-  def concatOptimized(): String = {
-    ScalaFormats.optimizedConcat(arg.value1, arg.value2, nullObject)
+  def concatOptimized1(): String = {
+    ScalaFormats.optimizedConcat1(arg.value1, arg.value2, nullObject)
+  }
+
+  @Benchmark
+  def concatOptimized2(): String = {
+    ScalaFormats.optimizedConcat2(arg.value1, arg.value2, nullObject)
+  }
+
+  @Benchmark
+  def concatOptimizedMacros(): String = {
+    ScalaFormats.optimizedConcatMacros(arg.value1, arg.value2, nullObject)
   }
 
   @Benchmark
