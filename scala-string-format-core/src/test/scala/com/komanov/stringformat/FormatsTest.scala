@@ -28,4 +28,17 @@ class FormatsTest extends SpecificationWithJUnit {
     }
   }
 
+  val formatsWithInputArgs = for {
+    (name, f) <- formats
+    arg <- InputArg.values
+  } yield (name, arg, f)
+
+  Fragment.foreach(formatsWithInputArgs) { case (name, arg, f) =>
+    s"$name" should {
+      s"product the same result as JavaConcat for $arg" >> {
+        f(arg.value1, arg.value2, null) must beEqualTo(JavaFormats.concat(arg.value1, arg.value2, null))
+      }
+    }
+  }
+
 }
