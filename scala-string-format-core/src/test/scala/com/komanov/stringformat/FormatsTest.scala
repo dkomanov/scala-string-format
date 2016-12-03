@@ -9,7 +9,6 @@ class FormatsTest extends SpecificationWithJUnit {
     "javaConcat" -> JavaFormats.concat,
     "stringFormat" -> JavaFormats.stringFormat,
     "messageFormat" -> JavaFormats.messageFormat,
-    "messageFormatCached" -> JavaFormats.messageFormatCached,
     "slf4j" -> JavaFormats.slf4j,
     "scalaConcat" -> ScalaFormats.concat,
     "optimizedConcat1" -> ScalaFormats.optimizedConcat1,

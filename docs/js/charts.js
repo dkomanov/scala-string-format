@@ -44,12 +44,8 @@ function loadScalaSerializationChartsPage(rawList) {
       color: '#ff0000'
     },
     {
-      name: 'messageFormatCached',
-      color: '#cc0000'
-    },
-    {
       name: 'scalaConcat',
-      color: '#999900'
+      color: '#cc0000'
     },
     {
       name: 'concatOptimized1',
@@ -61,7 +57,7 @@ function loadScalaSerializationChartsPage(rawList) {
     },
     {
       name: 'concatOptimizedMacros',
-      color: '#ff9966'
+      color: '#999900'
     },
     {
       name: 'slf4j',

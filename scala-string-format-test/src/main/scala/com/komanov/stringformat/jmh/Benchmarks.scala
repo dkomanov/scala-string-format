@@ -41,11 +41,6 @@ class ManyParamsBenchmark extends BenchmarkBase {
   }
 
   @Benchmark
-  def messageFormatCached(): String = {
-    JavaFormats.messageFormatCached(arg.value1, arg.value2, nullObject)
-  }
-
-  @Benchmark
   def slf4j(): String = {
     JavaFormats.slf4j(arg.value1, arg.value2, nullObject)
   }
