@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Scala String Format by Dmitry Komanov</title>
+  <title>Scala: String Interpolation Performance by Dmitry Komanov</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
@@ -15,7 +15,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">Scala String Format</a>
+      <a class="navbar-brand" href="">Scala String Interpolation Performance</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -31,24 +31,22 @@
 
 <div class="container-fluid">
 
-  <h1>Scala String Format</h1>
+  <h1>Scala: String Interpolation Performance</h1>
 
   <h2>Introduction</h2>
 
   <p>
     Here are present actual charts for performance comparison of string formatting in Java/Scala for the corresponding
-    article <a href="FIXME">&laquo;Scala String Format&raquo;</a>.
+    post <a href="https://medium.com/@dkomanov/scala-string-interpolation-performance-21dc85e83afd">&laquo;Scala: String Interpolation Performance&raquo;</a>.
   </p>
 
   <p>
-    The legend for tests. &laquo;Site&raquo; is a data transfer object (DTO) with different types of data
-    (lists, enums, regular fields). &laquo;Events&raquo; are the primitive representation of this DTO for
-    Event Sourcing (many small objects). Data sizes (1k, 2k etc.) are the corresponding size of the DTO in JSON format.
+    The legend for tests. &laquo;String length&raquo; is a length of a result string (after formatting).
   </p>
 
   <p>
-    Please notice, that unlike the article, here the performance tests are performed
-    via <a href="http://openjdk.java.net/projects/code-tools/jmh/">JMH</a> and using 2 threads.
+    Tests performed via <a href="http://openjdk.java.net/projects/code-tools/jmh/">JMH</a>, 2 forks, 3 warmup
+    runs and 7 iteration (3 seconds each). Ubuntu 16.04, linux-kernel 4.4.0-51-generic, JDK 1.8.0_91, scala library 2.12.
     The configuration of a hardware is Intel® Core™ i7–5600U CPU @ 2.60GHz × 4 (2 core + 2 HT) with 16 GB RAM.
   </p>
 
@@ -77,6 +75,10 @@
   </p>
 
   <div class="big-chart-raw-data collapse"></div>
+
+  <p>
+    Full JMH log is <a href="jmh.log">here</a>.
+  </p>
 
   <p>
     &nbsp;
