@@ -72,6 +72,10 @@ function loadScalaSerializationChartsPage(rawList) {
       color: '#cccccc'
     },
     {
+      name: 'rawInterpolator',
+      color: '#999999'
+    },
+    {
       name: 'sfiInterpolator',
       color: '#000000'
     }
